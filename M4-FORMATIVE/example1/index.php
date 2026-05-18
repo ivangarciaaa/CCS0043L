@@ -1,62 +1,45 @@
 <?php
-$pageTitle = "Story Gallery";
-$pageTagline = "Pick a story card to read.";
-require "header.php";
+require 'partials/header.php';
+require 'partials/navigation.php';
 ?>
-<section class="intro">
-  <h1 class="intro-title">Five Short Stories</h1>
-  <p class="intro-text">Each card opens a short, original placeholder story with a matching image.</p>
-</section>
-<section class="story-grid">
-  <article class="story-card">
-    <a href="story1.php">
-      <img src="assets/story1.svg" alt="Kite above a town at dusk">
-      <div class="card-body">
-        <h2>Story 1</h2>
-        <p>The Clockmaker's Kite</p>
-        <span class="card-link">Read story</span>
-      </div>
-    </a>
-  </article>
-  <article class="story-card">
-    <a href="story2.php">
-      <img src="assets/story2.svg" alt="Quiet library shelves at night">
-      <div class="card-body">
-        <h2>Story 2</h2>
-        <p>Midnight Library</p>
-        <span class="card-link">Read story</span>
-      </div>
-    </a>
-  </article>
-  <article class="story-card">
-    <a href="story3.php">
-      <img src="assets/story3.svg" alt="Rain over a colorful market">
-      <div class="card-body">
-        <h2>Story 3</h2>
-        <p>Rain in the Market</p>
-        <span class="card-link">Read story</span>
-      </div>
-    </a>
-  </article>
-  <article class="story-card">
-    <a href="story4.php">
-      <img src="assets/story4.svg" alt="Green sprout in warm light">
-      <div class="card-body">
-        <h2>Story 4</h2>
-        <p>The Last Seed</p>
-        <span class="card-link">Read story</span>
-      </div>
-    </a>
-  </article>
-  <article class="story-card">
-    <a href="story5.php">
-      <img src="assets/story5.svg" alt="Paper boat on a river">
-      <div class="card-body">
-        <h2>Story 5</h2>
-        <p>Paper Boat</p>
-        <span class="card-link">Read story</span>
-      </div>
-    </a>
-  </article>
-</section>
-<?php include "footer.php"; ?>
+
+<main>
+    <div class="container">
+        <h1>Short Stories Collection</h1>
+        <p>Welcome to our simple stories website. Select a story from the menu above to read.</p>
+        
+        <?php
+if (!isset($_GET['story'])) {
+echo "<div class='stories-grid'>";
+$stories = array(
+'story1' => 'The Lost Key',
+'story2' => 'The Cat in the Rain',
+'story3' => 'The Garden',
+'story4' => 'The Old Train Station',
+'story5' => 'The Letter'
+);
+foreach ($stories as $story_id => $story_title) {
+echo "<a href='index.php?story=" . $story_id . "' class='story-box'>";
+include 'assets/' . $story_id . '.svg';
+                    echo "<h3>" . $story_title . "</h3>";
+                    echo "</a>";
+                }
+echo "</div>";
+} else {
+$story = $_GET['story'];
+$story_file = 'stories/' . $story . '.php';
+                
+if (file_exists($story_file)) {
+include $story_file;
+} else {
+echo "<p>Story not found.</p>";
+}
+}
+?>
+    </div>
+</main>
+
+<?php
+    
+    require 'partials/footer.php';
+?>
