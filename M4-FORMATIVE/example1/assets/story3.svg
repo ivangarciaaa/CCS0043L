@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Rain over a market">
+  <defs>
+    <linearGradient id="rain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a5d4c9" />
+      <stop offset="100%" stop-color="#4f9fa3" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#rain)" />
+  <rect y="360" width="800" height="240" fill="#3f7f7c" />
+  <rect x="80" y="320" width="140" height="80" fill="#f2b48f" />
+  <rect x="250" y="320" width="140" height="80" fill="#e99b7a" />
+  <rect x="420" y="320" width="140" height="80" fill="#f0a96c" />
+  <rect x="590" y="320" width="140" height="80" fill="#e78c6f" />
+  <g stroke="#e8f2f1" stroke-width="4" stroke-linecap="round">
+    <line x1="140" y1="90" x2="120" y2="130" />
+    <line x1="260" y1="70" x2="240" y2="110" />
+    <line x1="360" y1="90" x2="340" y2="130" />
+    <line x1="470" y1="60" x2="450" y2="100" />
+    <line x1="580" y1="90" x2="560" y2="130" />
+    <line x1="680" y1="70" x2="660" y2="110" />
+  </g>
+  <text x="60" y="520" font-family="Verdana, sans-serif" font-size="36" fill="#f4efe7">Story 3</text>
+</svg>
