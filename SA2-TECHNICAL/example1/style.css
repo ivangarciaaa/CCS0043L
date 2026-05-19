@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(221, 221, 221);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.fruit-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fruit-table thead {
+    background-color: lightgray;
+}
+
+.fruit-table th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.fruit-table td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.image-cell {
+    text-align: center;
+    width: 120px;
+}
+
+.image-cell img {
+    width: 100px;
+    height: 100px;
+}
+
+.name-cell {
+    font-weight: bold;
+}
+
+.color {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.description-cell {
+    font-size: 0.95em;
+}
+
+.facts-cell {
+    font-size: 0.95em;
+}

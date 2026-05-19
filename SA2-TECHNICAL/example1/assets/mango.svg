@@ -1,0 +1,12 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mango body -->
+  <ellipse cx="50" cy="55" rx="30" ry="35" fill="#FF8C00"/>
+  <!-- Mango top point -->
+  <polygon points="50,15 40,30 60,30" fill="#FF8C00"/>
+  <!-- Highlight -->
+  <ellipse cx="40" cy="40" rx="12" ry="18" fill="#FFB90F" opacity="0.6"/>
+  <!-- Stem -->
+  <rect x="48" y="8" width="4" height="10" fill="#228B22"/>
+  <!-- Leaf -->
+  <ellipse cx="60" cy="12" rx="12" ry="8" fill="#228B22" transform="rotate(-30 60 12)"/>
+</svg>
